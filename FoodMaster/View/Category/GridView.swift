@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GridView: View {
-    @State private var itemCount = 1
+    @State private var itemCount = 2
 //    let columns = Array(repeating: GridItem(.flexible()), count: itemCount)
     let flagFinder = CountryFlagFinder()
     @State private var selectedButtonIndex = 1
@@ -479,7 +479,7 @@ struct GridView: View {
                                             ZStack{
                                                 RoundedRectangle(cornerRadius: 30)
                                                     .foregroundColor(ColorPalette.greenColor)
-                                                    .frame(width: 170, height: 32)
+                                                    .frame(width: 170, height: 50)
                                                 HStack{
                                                     
                                                     Button() {
@@ -494,11 +494,13 @@ struct GridView: View {
                                                     } label: {
                                                         ZStack{
                                                             Text("-")
-                                                                .font(.system(size: 20))
+                                                                .font(.system(size: 25))
                                                                 .fontWeight(.bold)
                                                         }
                                                     }
                                                     .padding()
+                                                    .padding(.leading, 10)
+                                                    Spacer()
                                                     VStack{
                                                         selectedButtonIndex == 1 ?
                                                         Group {
@@ -520,7 +522,7 @@ struct GridView: View {
                                                         }
                                                         
                                                     }
-                                                    
+                                                    Spacer()
                                                     Button() {
                                                         if selectedButtonIndex == 1{
                                                             cargo += 0.1
@@ -531,11 +533,12 @@ struct GridView: View {
                                                     } label: {
                                                         ZStack{
                                                             Text("+")
-                                                                .font(.system(size: 20))
+                                                                .font(.system(size: 25))
                                                                 .fontWeight(.bold)
                                                         }
                                                     }
                                                     .padding()
+                                                    .padding(.trailing, 10)
                                                 }
                                                 .foregroundColor(.white)
                                             }
