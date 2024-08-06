@@ -388,7 +388,7 @@ struct GridView: View {
                                                         .frame(width: 2)
                                                     
                                                     Text("\(String(format: "%.1f", product.rating))")
-                                                        .font(.system(size: 11))
+                                                        .font(.system(size: 14))
                                                         .opacity(0.8)
                                                 }
                                                 .background(
@@ -415,7 +415,7 @@ struct GridView: View {
                                         
                                         HStack{
                                             Text(product.name)
-                                                .font(.system(size: 10))
+                                                .font(.system(size: 13))
                                                 .opacity(0.8)
                                                 .padding(.leading , 10)
                                             Spacer()
