@@ -171,7 +171,7 @@ struct GridView: View {
                                                 VStack(spacing: 0){
                                                     ZStack{
                                                         RoundedRectangle(cornerRadius: 8)
-                                                            .frame(width: geo.size.width * 0.44, height: geo.size.height * 0.05)
+                                                            .frame(width: 200, height: geo.size.height * 0.05)
                                                             .foregroundColor(ColorPalette.buttonBackground)
                                                         HStack(spacing: 0){
                                                             Button(){
@@ -186,7 +186,7 @@ struct GridView: View {
                                                                         .foregroundColor(selectedButtonIndex == 0 ? .black : ColorPalette.textColor.opacity(0.6))
                                                                 }
                                                             }
-                                                            .frame(width: 90, height: 30)
+                                                            .frame(width: 100, height: 30)
                                                             //                                                .background(.blue)
                                                             
                                                             
@@ -202,7 +202,7 @@ struct GridView: View {
                                                                         .foregroundColor(selectedButtonIndex == 1 ? .black : ColorPalette.textColor.opacity(0.6))
                                                                 }
                                                             }
-                                                            .frame(width: 90, height: 30)
+                                                            .frame(width: 100, height: 30)
                                                             //                                                .background(.green)
                                                         }
                                                     }
@@ -210,7 +210,7 @@ struct GridView: View {
                                                     ZStack{
                                                         RoundedRectangle(cornerRadius: 30)
                                                             .foregroundColor(ColorPalette.greenColor)
-                                                            .frame(width: 180, height: 32)
+                                                            .frame(width: 200, height: 50)
                                                         HStack{
                                                             
                                                             Button() {
@@ -225,11 +225,12 @@ struct GridView: View {
                                                             } label: {
                                                                 ZStack{
                                                                     Text("-")
-                                                                        .font(.system(size: 20))
+                                                                        .font(.system(size: 30))
                                                                         .fontWeight(.bold)
                                                                 }
                                                             }
                                                             .padding()
+                                                            Spacer()
                                                             VStack{
                                                                 selectedButtonIndex == 1 ?
                                                                 Group {
@@ -251,7 +252,7 @@ struct GridView: View {
                                                                 }
                                                                 
                                                             }
-                                                            
+                                                            Spacer()
                                                             Button() {
                                                                 if selectedButtonIndex == 1{
                                                                     cargo += 0.1
@@ -262,7 +263,7 @@ struct GridView: View {
                                                             } label: {
                                                                 ZStack{
                                                                     Text("+")
-                                                                        .font(.system(size: 20))
+                                                                        .font(.system(size: 30))
                                                                         .fontWeight(.bold)
                                                                 }
                                                             }
@@ -591,7 +592,7 @@ struct GridView: View {
                             }
                             
                             .foregroundColor(ColorPalette.textColor)
-                            .frame(height: itemCount == 1 ? geo.size.height * 0.3 : geo.size.height * 0.45)
+                            .frame(height: itemCount == 1 ? geo.size.height * 0.25 : geo.size.height * 0.45)
                             
                             .background(
                                 Group {
