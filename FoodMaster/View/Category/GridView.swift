@@ -126,11 +126,7 @@ struct GridView: View {
                                                             .font(.system(size: 14))
                                                             .opacity(0.8)
                                                     }
-                                                    .background(
-                                                        RoundedRectangle(cornerRadius: 6)
-                                                            .frame(width:40,height: 20)
-                                                            .foregroundColor(.white)
-                                                    )
+                                                    
                                                     .padding(.leading, 16)
                                                     
                                                     Text("\(product.name)")
@@ -622,7 +618,8 @@ struct GridView: View {
             .frame(maxWidth: .infinity)
             
         }
-        
+        .background(.white)
+       
         
         
         
